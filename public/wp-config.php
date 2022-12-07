@@ -1,0 +1,85 @@
+<?php
+define( 'WP_CACHE', true ); // Added by WP Rocket
+/**
+ * As configurações básicas do WordPress
+ *
+ * O script de criação wp-config.php usa esse arquivo durante a instalação.
+ * Você não precisa usar o site, você pode copiar este arquivo
+ * para "wp-config.php" e preencher os valores.
+ *
+ * Este arquivo contém as seguintes configurações:
+ *
+ * * Configurações do MySQL
+ * * Chaves secretas
+ * * Prefixo do banco de dados
+ * * ABSPATH
+ *
+ * @link https://wordpress.org/support/article/editing-wp-config-php/
+ *
+ * @package WordPress
+ */
+// ** Configurações do MySQL - Você pode pegar estas informações com o serviço de hospedagem ** //
+/** O nome do banco de dados do WordPress */
+define( 'DB_NAME', "c10propaganda03" );
+/** Usuário do banco de dados MySQL */
+define( 'DB_USER', "c10propaganda03" );
+/** Senha do banco de dados MySQL */
+define( 'DB_PASSWORD', "andre1z" );
+/** Nome do host do MySQL */
+define( 'DB_HOST', "mysql.c10propaganda.com.br" );
+/** Charset do banco de dados a ser usado na criação das tabelas. */
+define( 'DB_CHARSET', 'utf8mb4' );
+/** O tipo de Collate do banco de dados. Não altere isso se tiver dúvidas. */
+define( 'DB_COLLATE', '' );
+/**#@+
+ * Chaves únicas de autenticação e salts.
+ *
+ * Altere cada chave para um frase única!
+ * Você pode gerá-las
+ * usando o {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org
+ * secret-key service}
+ * Você pode alterá-las a qualquer momento para invalidar quaisquer
+ * cookies existentes. Isto irá forçar todos os
+ * usuários a fazerem login novamente.
+ *
+ * @since 2.6.0
+ */
+define( 'AUTH_KEY',         'WRwN)sNdgpvOs)&<.y8uX<Ew4k ._m5&0z6(XC,q#XNp=T:J2$#S6^k,*_>Nh[rJ' );
+define( 'SECURE_AUTH_KEY',  'u|pG4:l*aX&D~^&j<hT9|0&>j(@WDWhUWo75-5m}xyS{+y5bsBZw)Je}B5w?+<cm' );
+define( 'LOGGED_IN_KEY',    '}.I-}`Pq|u^X`&gV]rZ@c>jC[VjxIbW)}MU^11tL_7gB{Gu7F5<AHo7q(A_2ja?)' );
+define( 'NONCE_KEY',        'Wn3z%E,0y_ >V?rj+vIdLpn5xU<N$+M{x6JHnAjvM|ks7a*D0, y6_N64G_]:Cns' );
+define( 'AUTH_SALT',        'nQ.,:Cp-~en_NuV_C$/*f_Vt.~K&HrNUfp?%PaV;1sjOsyPoyMIG>twEVU|nnyU*' );
+define( 'SECURE_AUTH_SALT', '9wpA*lR]K$P.6=<B/hx1X8btcV19@G-*1ah;u &?lR9 z11xE%%dKn8(Tr#i+tRH' );
+define( 'LOGGED_IN_SALT',   '_]<!YW;|%_[m~W~iLH&HhBreS1b|^&H_,W??xW6GmHJ_C?vw?E3Fp&W`)b.))n#u' );
+define( 'NONCE_SALT',       '+7N;lU#Tm*;:FJo9?mwL8|Ye0r8:D[,uCWjW&N;v~8,4:.nOL&OzRS1>j U%sF2/' );
+/**#@-*/
+/**
+ * Prefixo da tabela do banco de dados do WordPress.
+ *
+ * Você pode ter várias instalações em um único banco de dados se você der
+ * um prefixo único para cada um. Somente números, letras e sublinhados!
+ */
+$table_prefix = 'wp_';
+/**
+ * Para desenvolvedores: Modo de debug do WordPress.
+ *
+ * Altere isto para true para ativar a exibição de avisos
+ * durante o desenvolvimento. É altamente recomendável que os
+ * desenvolvedores de plugins e temas usem o WP_DEBUG
+ * em seus ambientes de desenvolvimento.
+ *
+ * Para informações sobre outras constantes que podem ser utilizadas
+ * para depuração, visite o Codex.
+ *
+ * @link https://wordpress.org/support/article/debugging-in-wordpress/
+ */
+define( 'WP_DEBUG', false );
+/* Adicione valores personalizados entre esta linha até "Isto é tudo". */
+/* Isto é tudo, pode parar de editar! :) */
+/** Caminho absoluto para o diretório WordPress. */
+define( 'WP_SITEURL', 'http://c10propaganda.com.br/i_yduqs/' );
+if ( ! defined( 'ABSPATH' ) ) {
+	define( 'ABSPATH', dirname(__FILE__) . '/' );
+}
+/** Configura as variáveis e arquivos do WordPress. */
+require_once ABSPATH . 'wp-settings.php';
